@@ -7,23 +7,25 @@
       body {
         margin: 0;
         font-family: Arial, sans-serif;
-        display: flex; /* for left menu + main content */
       }
 
       /* --- Top banner --- */
       header {
-        position: fixed;
-        top: 0;
-        left: 0;
         width: 100%;
-        height: 80px;
-        background-color: #2c3e50;
+        height: 360px;
+        background-image: url('snooker_banner.jpg');
+        background-size: cover;
+        background-position: center;
         color: white;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 24px;
-        z-index: 1000;
+        font-size: 36px;
+      }
+
+      /* --- Wrapper for sidebar + main content --- */
+      #content-wrapper {
+        display: flex;
       }
 
       /* --- Left-side menu --- */
@@ -31,8 +33,6 @@
         width: 200px;
         background-color: #ecf0f1;
         padding: 10px;
-        margin-top: 80px; /* leave space for header */
-        height: 100vh;
         box-sizing: border-box;
       }
 
@@ -51,7 +51,7 @@
       /* --- Main content --- */
       #main {
         flex: 1;
-        padding: 100px 20px 20px 20px; /* top padding leaves space for header */
+        padding: 20px;
       }
 
       /* --- Button styling --- */
@@ -69,25 +69,28 @@
       My Snooker Tournaments
     </header>
 
-    <!-- Left Menu -->
-    <div id="sidebar">
-      <button onclick="toggleMenu()">Tournament Menu</button>
-      <div id="menuContent">
-        <a href="#">January Tournament</a>
-        <a href="#">February Tournament</a>
-        <a href="#">March Tournament</a>
+    <!-- Sidebar + Main Content Wrapper -->
+    <div id="content-wrapper">
+      <!-- Left Menu -->
+      <div id="sidebar">
+        <button onclick="toggleMenu()">Tournament Menu</button>
+        <div id="menuContent">
+          <a href="#">January Tournament</a>
+          <a href="#">February Tournament</a>
+          <a href="#">March Tournament</a>
+        </div>
       </div>
-    </div>
 
-    <!-- Main Content -->
-    <div id="main">
-      <h1>Welcome to My Snooker Tournaments</h1>
-      <p>Monthly snooker tournaments hosted by me.</p>
-      <a href="results.html">View past tournament results</a>
-      <p>Next tournament: March 12, 7pm</p>
-      <a href="EB 6red December Tournament.pdf" target="_blank">
-        View Tournament Rules (PDF)
-      </a>
+      <!-- Main Content -->
+      <div id="main">
+        <h1>Welcome to My Snooker Tournaments</h1>
+        <p>Monthly snooker tournaments hosted by me.</p>
+        <a href="results.html">View past tournament results</a>
+        <p>Next tournament: March 12, 7pm</p>
+        <a href="EB 6red December Tournament.pdf" target="_blank">
+          View Tournament Rules (PDF)
+        </a>
+      </div>
     </div>
 
     <!-- JavaScript for menu toggle -->
