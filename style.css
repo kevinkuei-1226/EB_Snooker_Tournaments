@@ -20,6 +20,12 @@ justify-content: center;
 font-size: 36px;
 }
 
+.container {
+        max-width: 90%;
+        margin: 40px auto;
+        padding: 20px;
+}
+
 /* --- Wrapper for sidebar + main content --- */
 #content-wrapper {
 display: flex;
@@ -82,16 +88,17 @@ opacity: 0.9;
 }
 
 .dashboard-card {
-  background-color: #f8f8f8;
+  background-color: #039e03;
   border-radius: 10px;
   text-align: center;
   text-decoration: none;
-  color: #2c3e50;
+  color: #ffffff;
   padding: 20px;
   transition: transform 0.2s, box-shadow 0.2s;
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-size: large;
 }
 
 .dashboard-card img {
@@ -103,4 +110,32 @@ opacity: 0.9;
 .dashboard-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+
+/* --- Announcement Bar --- */
+.announcement-bar {
+  width: 100%;
+  background-color: #1e1e1e; /* dark background */
+  color: #ffffff;
+  overflow: hidden; /* hides text outside the bar */
+  white-space: nowrap;
+  padding: 10px 0;
+}
+
+.announcement-text {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scroll-text 25s linear infinite;
+  font-size: 32px;
+}
+
+/* Animation */
+@keyframes scroll-text {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }
