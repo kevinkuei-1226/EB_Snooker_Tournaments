@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title> EB Snooker Tournaments </title>
+    <title>EB Snooker Tournaments</title>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
@@ -17,46 +17,26 @@
       </div>
     </header>
 
-    <!-- Sidebar + Main Content Wrapper -->
-    <div id="content-wrapper">
-      <!-- Left Menu -->
-      <div id="sidebar">
-        <button onclick="toggleMenu()">Tournament Menu</button>
-        <div id="menuContent">
-          <a href="#">January Tournament</a>
-          <a href="#">February Tournament</a>
-          <a href="#">March Tournament</a>
-        </div>
-      </div>
+    <!-- Main Content -->
+    <div class="container">
+      <h1>Welcome to My Snooker Tournaments</h1>
+      <p>put some information here about future snooker tournaments, or a section for upcoming tournaments</p>
 
-      <!-- Main Content -->
-      <div id="main">
-
-        <h1>Welcome to My Snooker Tournaments</h1>
-        <p>Monthly snooker tournaments hosted by me.</p>
-        <a href="results.html">View past tournament results</a>
-        <p>Next tournament: March 12, 7pm</p>
-        <a href="EB 6red December Tournament.pdf" target="_blank">
-          View Tournament Rules (PDF)
+      <!-- Dashboard Cards -->
+      <div class="dashboard">
+        <a href="results.html" class="dashboard-card">
+          <span>Past Results</span>
         </a>
 
-        <p>To register for the next tournament, please go to the 
-          <a href="register.html">registration page</a>.
+        <a href="EB January Snooker Tournament.pdf" target="_blank" class="dashboard-card">
+          <span>Current Tournament Info</span>
+        </a>
+
+        <a href="register.html" class="dashboard-card">
+          <span>Register</span>
+        </a>
       </div>
     </div>
-
-    <!-- JavaScript for menu toggle -->
-    <script>
-      function toggleMenu() {
-            const menu = document.getElementById("menuContent");
-
-            if (menu.style.display === "block") {
-              menu.style.display = "none";
-            } else {
-              menu.style.display = "block";
-            }
-          }
-    </script>
 
   </body>
 </html>
