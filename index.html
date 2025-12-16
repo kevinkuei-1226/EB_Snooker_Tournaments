@@ -1,72 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My Snooker Tournaments</title>
-    <style>
-      /* --- Basic page styling --- */
-      body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-      }
-
-      /* --- Top banner --- */
-      header {
-        width: 100%;
-        height: 360px;
-        background-image: url('snooker_banner.jpg');
-        background-size: cover;
-        background-position: center;
-        color: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 36px;
-      }
-
-      /* --- Wrapper for sidebar + main content --- */
-      #content-wrapper {
-        display: flex;
-      }
-
-      /* --- Left-side menu --- */
-      #sidebar {
-        width: 200px;
-        background-color: #ecf0f1;
-        padding: 10px;
-        box-sizing: border-box;
-      }
-
-      #menuContent {
-        display: none; /* hidden by default */
-        margin-top: 10px;
-      }
-
-      #menuContent a {
-        display: block;
-        margin: 5px 0;
-        text-decoration: none;
-        color: #2c3e50;
-      }
-
-      /* --- Main content --- */
-      #main {
-        flex: 1;
-        padding: 20px;
-      }
-
-      /* --- Button styling --- */
-      button {
-        padding: 8px 12px;
-        margin-bottom: 10px;
-        cursor: pointer;
-      }
-    </style>
+    <title> EB Snooker Tournaments </title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
 
     <!-- Top Banner -->
     <header>
-      My Snooker Tournaments
+      <div class="banner-title">
+        Empire Billiards Snooker Tournaments
+      </div>
+
+      <div class="banner-host">
+        Hosted by Kevin Kuei
+      </div>
     </header>
 
     <!-- Sidebar + Main Content Wrapper -->
@@ -100,9 +48,14 @@
     <!-- JavaScript for menu toggle -->
     <script>
       function toggleMenu() {
-        const menu = document.getElementById("menuContent");
-        menu.style.display = menu.style.display === "none" ? "block" : "none";
-      }
+            const menu = document.getElementById("menuContent");
+
+            if (menu.style.display === "block") {
+              menu.style.display = "none";
+            } else {
+              menu.style.display = "block";
+            }
+          }
     </script>
 
   </body>
