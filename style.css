@@ -184,7 +184,8 @@ opacity: 0.9;
 
   .dashboard-card {
     padding: 20px;
-    font-size: 18px;
+    font-size: 48px;
+    flex-direction: column;
   }
 
   /* --- Results cards --- */
