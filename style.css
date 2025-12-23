@@ -1,139 +1,149 @@
 
 /* --- Basic page styling --- */
 body {
-margin: 0;
-font-family: Arial, sans-serif;
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
+
 
 /* --- Top banner --- */
 header {
-position: relative;
-width: 100%;
-height: 360px;
-background-image: url('EB Tables.jpg');
-background-size: cover;
-background-position: center;
-color: rgb(255, 255, 255);
-display: flex;
-align-items: center;
-justify-content: center;
-font-size: 36px;
-
+    position: relative;
+    width: 100%;
+    height: 360px;
+    background-image: url('EB Tables.jpg');
+    background-size: cover;
+    background-position: center;
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
 }
 
+/* --- Main container --- */
 .container {
-        max-width: 90%;
-        margin: 40px auto;
-        padding: 20px;
-        font-size: 32px;
+    max-width: 90%;
+    margin: 40px auto;
+    padding: 20px;
+    font-size: 24px;
 }
+
 
 /* --- Wrapper for sidebar + main content --- */
 #content-wrapper {
-display: flex;
+    display: flex;
 }
+
 
 /* --- Left-side menu --- */
 #sidebar {
-width: 200px;
-background-color: #ecf0f1;
-padding: 10px;
-box-sizing: border-box;
+    width: 200px;
+    background-color: #ecf0f1;
+    padding: 10px;
+    box-sizing: border-box;
 }
+
 
 #menuContent {
-display: none; /* hidden by default */
-margin-top: 10px;
+    display: none; /* hidden by default */
+    margin-top: 10px;
 }
 
+
 #menuContent a {
-display: block;
-margin: 5px 0;
-text-decoration: none;
-color: #2c3e50;
+    display: block;
+    margin: 5px 0;
+    text-decoration: none;
+    color: #2c3e50;
 }
+
 
 /* --- Main content --- */
 #main {
-flex: 1;
-padding: 20px;
+    flex: 1;
+    padding: 20px;
 }
 
 /* --- Button styling --- */
 button {
-padding: 8px 12px;
-margin-bottom: 10px;
-cursor: pointer;
+    padding: 8px 12px;
+    margin-bottom: 10px;
+    cursor: pointer;
 }
 
 .banner-title {
-font-size: 64px;
-font-weight: 800;
-text-align: center;
-text-shadow: 4px 4px 10px rgba(0,0,0,0.8);
-
+    font-size: 64px;
+    font-weight: 800;
+    text-align: center;
+    text-shadow: 4px 4px 10px rgba(0,0,0,0.8);
 }
 
 
 /* Small bottom-right text */
 .banner-host {
-position: absolute;
-bottom: 15px;
-right: 20px;
-font-size: 20px;
-opacity: 0.9;
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
+    font-size: 20px;
+    opacity: 0.9;
 }
 
 
 .dashboard {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 20px;
-  padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 20px;
 }
+
 
 .dashboard-card {
-  background-color: #039e03;
-  border-radius: 10px;
-  text-align: center;
-  text-decoration: none;
-  color: #ffffff;
-  padding: 20px;
-  transition: transform 0.2s, box-shadow 0.2s;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 30px;
+    background-color: #039e03;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 20px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 30px;
 }
+
 
 .dashboard-card img {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 10px;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
 }
 
+
 .dashboard-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 
 /* --- Announcement Bar --- */
 .announcement-bar {
-  width: 100%;
-  background-color: #1e1e1e; /* dark background */
-  color: #ffffff;
-  overflow: hidden; /* hides text outside the bar */
-  white-space: nowrap;
-  padding: 10px 0;
+    width: 100%;
+    background-color: #1e1e1e; /* dark background */
+    color: #ffffff;
+    overflow: hidden; /* hides text outside the bar */
+    white-space: nowrap;
+    padding: 10px 0;
 }
 
+
 .announcement-text {
-  display: inline-block;
-  padding-left: 100%;
-  animation: scroll-text 20s linear infinite;
-  font-size: 32px;
+    display: inline-block;
+    padding-left: 100%;
+    animation: scroll-text 20s linear infinite;
+    font-size: 32px;
 }
+
 
 /* Animation */
 @keyframes scroll-text {
