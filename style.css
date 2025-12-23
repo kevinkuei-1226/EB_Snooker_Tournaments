@@ -25,6 +25,7 @@ font-size: 36px;
         max-width: 90%;
         margin: 40px auto;
         padding: 20px;
+        font-size: 32px;
 }
 
 /* --- Wrapper for sidebar + main content --- */
@@ -174,6 +175,7 @@ opacity: 0.9;
   /* --- Main container --- */
   .container {
     padding: 15px;
+    font-size: 16p  x;
   }
 
   /* --- Dashboard cards --- */
