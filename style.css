@@ -155,7 +155,7 @@ opacity: 0.9;
   /* --- Top banner --- */
   header {
     height: 200px;          /* shorter banner */
-    font-size: 22px;        /* smaller title */
+    font-size: 16px;        /* smaller title */
     padding: 10px;
     text-align: center;
   }
@@ -184,7 +184,7 @@ opacity: 0.9;
 
   .dashboard-card {
     padding: 20px;
-    font-size: 48px;
+    font-size: 30px;
     flex-direction: column;
   }
 
