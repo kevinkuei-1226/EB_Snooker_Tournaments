@@ -7,18 +7,35 @@ body {
 
 
 /* --- Top banner --- */
+
 header {
     position: relative;
     width: 100%;
     height: 360px;
-    background-image: url('Images/EB Tables.jpg');
-    background-size: cover;
-    background-position: center;
     color: rgb(255, 255, 255);
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 36px;
+    /* Prevents the blurred edges of the pseudo-element from spilling out */
+    overflow: hidden; 
+}
+
+/* This creates a background layer specifically for the image */
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('Images/EB Tables.jpg');
+    background-size: cover;
+    background-position: center;
+    /* Adjust the pixels (px) to change the blur intensity */
+    filter: blur(2px); 
+    /* Keeps the background behind the text */
+    z-index: -1; 
 }
 
 /* --- Main container --- */
