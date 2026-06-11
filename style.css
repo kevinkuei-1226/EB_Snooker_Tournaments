@@ -138,10 +138,33 @@ button {
 
 
 .dashboard-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    background-color: #03c203;
 }
 
+/* for challenge cards */
+
+.challenge-card {
+    background-color: #0026ff;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 20px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 30px;
+}
+
+
+.challenge-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    background-color: #006eff;
+}
 
 /* --- Announcement Bar --- */
 .announcement-bar {
