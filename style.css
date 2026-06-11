@@ -159,6 +159,11 @@ button {
     font-size: 30px;
 }
 
+.challenge-card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
 
 .challenge-card:hover {
     transform: translateY(-10px);
