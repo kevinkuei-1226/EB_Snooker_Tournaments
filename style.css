@@ -178,7 +178,7 @@ button {
     color: #ffffff;
     overflow: hidden; /* hides text outside the bar */
     white-space: nowrap;
-    padding: 10px 0;
+    /* padding: 10px 0; */
 }
 
 
