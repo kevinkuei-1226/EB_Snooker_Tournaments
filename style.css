@@ -1,4 +1,3 @@
-
 /* --- Basic page styling --- */
 body {
     margin: 0;
@@ -7,7 +6,6 @@ body {
 
 
 /* --- Top banner --- */
-
 header {
     position: relative;
     width: 100%;
@@ -46,47 +44,10 @@ header::before {
     font-size: 24px;
 }
 
-
-/* --- Wrapper for sidebar + main content --- */
-#content-wrapper {
-    display: flex;
-}
-
-
-/* --- Left-side menu --- */
-#sidebar {
-    width: 200px;
-    background-color: #ecf0f1;
-    padding: 10px;
-    box-sizing: border-box;
-}
-
-
-#menuContent {
-    display: none; /* hidden by default */
-    margin-top: 10px;
-}
-
-
-#menuContent a {
-    display: block;
-    margin: 5px 0;
-    text-decoration: none;
-    color: #2c3e50;
-}
-
-
-/* --- Main content --- */
+/* --- Main content layout --- */
 #main {
     flex: 1;
     padding: 20px;
-}
-
-/* --- Button styling --- */
-button {
-    padding: 8px 12px;
-    margin-bottom: 10px;
-    cursor: pointer;
 }
 
 .banner-title {
@@ -95,7 +56,6 @@ button {
     text-align: center;
     text-shadow: 4px 4px 10px rgba(0,0,0,0.8);
 }
-
 
 /* Small bottom-right text */
 .banner-host {
@@ -106,14 +66,13 @@ button {
     opacity: 0.9;
 }
 
-
+/* --- Grid Dashboard Layout --- */
 .dashboard {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 20px;
     padding: 20px;
 }
-
 
 .dashboard-card {
     background-color: #039e03;
@@ -129,13 +88,11 @@ button {
     font-size: 30px;
 }
 
-
 .dashboard-card img {
     width: 60px;
     height: 60px;
     margin-bottom: 10px;
 }
-
 
 .dashboard-card:hover {
     transform: translateY(-10px);
@@ -143,8 +100,7 @@ button {
     background-color: #03c203;
 }
 
-/* for challenge cards */
-
+/* For challenge cards */
 .challenge-card {
     background-color: #0026ff;
     border-radius: 10px;
@@ -172,22 +128,19 @@ button {
 }
 
 /* --- Announcement Bar --- */
+
 .announcement-bar {
     width: 100%;
     background-color: #000000; /* dark background */
     color: #ffffff;
-    overflow: hidden; /* hides text outside the bar */
-    white-space: nowrap;
-    /* padding: 10px 0; */
+    padding: 10px 0;          /* Adds some top/bottom padding since it's not moving anymore */
+    text-align: center;       /* Centers the text nicely */
 }
 
 .announcement-text {
     display: inline-block;
-    padding-left: 100%;
-    animation: scroll-text 20s linear infinite;
-    font-size: 32px;
+    font-size: 32px;          /* Kept your original large text size */
 }
-
 
 /* Animation */
 @keyframes scroll-text {
@@ -200,6 +153,72 @@ button {
 }
 
 
+/* ===========================
+   DROP DOWN NAVIGATION STYLING
+   =========================== */
+
+/* Main Navbar Layout */
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* Aligns items horizontally */
+  background-color: #ffffff; 
+}
+
+.navbar li {
+  position: relative; /* Keeps the dropdown anchored to this item */
+}
+
+/* Main Links Style */
+.navbar a {
+  display: block;
+  color: #0011ff; /* Orange color matching your screenshot */
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 32px;
+}
+
+/* --- DROPDOWN SPECIFIC STYLES --- */
+
+/* Hide the sub-menu by default */
+.dropdown-content {
+  display: none !important;
+  position: absolute; /* Pushes it out of the normal text flow */
+  background-color: #ffffff;
+  min-width: 180px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.1); /* Soft shadow */
+  z-index: 1; /* Keeps it on top of other content */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 4px;
+}
+
+/* Align links inside the dropdown stacked vertically */
+.dropdown-content li a {
+  color: #ff7300;
+  padding: 12px 16px;
+  text-align: left;
+}
+
+/* Change color of sub-menu items on hover */
+.dropdown-content li a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show the dropdown menu when hovering over the parent list item */
+.dropdown:hover .dropdown-content {
+  display: block !important;
+}
+
+/* Tiny styling for the arrows */
+.arrow {
+  font-size: 0.8em;
+  margin-left: 5px;
+}
 
 
 /* ===========================
@@ -207,7 +226,6 @@ button {
    =========================== */
 @media (max-width: 768px) {
 
-  /* --- Top banner --- */
   header {
     height: 200px;          /* shorter banner */
     font-size: 16px;        /* smaller title */
@@ -226,13 +244,11 @@ button {
     right: 10px;
   }
 
-  /* --- Main container --- */
   .container {
     padding: 15px;
     font-size: 15px;
   }
 
-  /* --- Dashboard cards --- */
   .dashboard {
     grid-template-columns: 1fr; /* stack cards vertically */
     gap: 15px;
@@ -244,47 +260,21 @@ button {
     flex-direction: column;
   }
 
-  /* --- Results cards --- */
-  .result-card {
-    flex-direction: column;   /* image below text */
-    align-items: flex-start;
-  }
-
-  .card-image {
-    margin-top: 10px;
-    width: 100%;
-  }
-
-  .card-image img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-  }
-
-  /* --- Forms (register page) --- */
-  form {
-    width: 100%;
-  }
-
   input, textarea, button {
     font-size: 16px;
   }
 
   .announcement-text {
-  display: inline-block;
-  /* padding-left: 100%; */
-
-  animation: scroll-text 20s linear infinite;
-  font-size: 20px;
+    display: inline-block;
+    /* animation: scroll-text 20s linear infinite; */
+    font-size: 20px;
   }
-
 }
 
 
 /* ===========================
    PLAYERS LIST PAGE
    =========================== */
-
 .back-link {
   display: inline-block;
   margin-bottom: 20px;
@@ -317,7 +307,6 @@ button {
   padding: 6px 0;
 }
 
-/* Mobile adjustments */
 @media (max-width: 768px) {
   .players-card {
     padding: 20px;
@@ -327,4 +316,3 @@ button {
     font-size: 18px;
   }
 }
-
