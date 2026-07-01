@@ -252,13 +252,6 @@ header::before {
   }
 
 
-  header {
-    height: 200px;          /* shorter banner */
-    font-size: 16px;        /* smaller title */
-    padding: 10px;
-    text-align: center;
-  }
-
   .banner-title {
     font-size: 32px;
     line-height: 1.2;
@@ -280,10 +273,10 @@ header::before {
     gap: 15px;
   }
 
-  .dashboard-card {
-    padding: 20px;
-    font-size: 30px;
-    flex-direction: column;
+ /* 1. Force the dashboard cards text to a readable mobile size */
+  .dashboard-card, .challenge-card {
+    padding: 15px;
+    font-size: 18px; /* Brings it down so it fits on the screen */
   }
 
   input, textarea, button {
@@ -291,9 +284,10 @@ header::before {
   }
 
   .announcement-text {
-    display: inline-block;
-    /* animation: scroll-text 20s linear infinite; */
-    font-size: 20px;
+    display: block;    /* Changed from inline-block */
+    padding: 0 15px;   /* Prevents text from hitting the raw edge */
+    font-size: 18px;   /* Slightly smaller to ensure it fits beautifully */
+    word-wrap: break-word;
   }
 }
 
