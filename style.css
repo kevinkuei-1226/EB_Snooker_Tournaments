@@ -226,6 +226,31 @@ header::before {
    =========================== */
 @media (max-width: 768px) {
 
+  /* --- ADD THESE NAVBAR MOBILE OVERRIDES --- */
+  .navbar ul {
+    flex-direction: column; /* Stacks the menu items vertically on mobile */
+    text-align: center;
+  }
+
+  .navbar a {
+    font-size: 18px;        /* Shrinks the text down to a normal phone size */
+    padding: 10px 15px;     /* Tighter spacing for touch targets */
+    border-bottom: 1px solid #f0f0f0; /* Optional: adds a clean divider between items */
+  }
+  
+  .navbar li:last-child a {
+    border-bottom: none;    /* Removes the bottom border on the last item */
+  }
+  /* ----------------------------------------- */
+
+  header {
+    height: 200px;          /* shorter banner */
+    font-size: 16px;        /* smaller title */
+    padding: 10px;
+    text-align: center;
+  }
+
+  
   header {
     height: 200px;          /* shorter banner */
     font-size: 16px;        /* smaller title */
