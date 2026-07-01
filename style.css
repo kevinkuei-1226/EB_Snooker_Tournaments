@@ -22,7 +22,7 @@ header {
 /* This creates a background layer specifically for the image */
 header::before {
     content: "";
-    position: relative;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
