@@ -143,6 +143,14 @@ header::before {
     font-size: 32px;          /* Kept your original large text size */
 }
 
+.rounded-border-box {
+    border: 3px solid #000000;   /* 2px thick, solid line, blue color */
+    border-radius: 12px;         /* Adjust this number to make it more or less rounded */
+    padding: 15px 20px;          /* 15px spacing top/bottom, 20px left/right */
+    display: inline-block;
+    font-size: medium;       /* Keeps the box tight around the text instead of stretching 100% wide */
+}
+
 /* Animation */
 @keyframes scroll-text {
   from {
