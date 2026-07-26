@@ -38,39 +38,12 @@
         flex: 1;                     /* take remaining space */
       }
 
-      /* 1. Make the container the 'Anchor' */
-      .card-image {
-        position: relative; /* This tells the text to stay trapped inside this box */
-        display: inline-block; /* Keeps the container the exact size of the image */
-      }
-
       .card-image img {
         max-width: 640px;            /* adjust as needed */
-        max-height: 320px;
+        max-height: 640px;
         border-radius: 4px;
         margin-left: 20px;           /* space between text and image */
       }
-
-      /* 3. The new code that positions the text overlay */
-      .image-overlay-text {
-        position: absolute;
-        
-        /* Positioning coordinates (offsets from the edges) */
-        bottom: 15px;       /* Keeps it 15px from the bottom edge */
-        right: 15px;        /* Keeps it 15px from the right edge */
-        
-        /* Text & Banner Styling */
-        background-color: rgba(44, 62, 80, 0.85); /* Semi-transparent dark slate */
-        color: #ffffff;
-        padding: 8px 16px;
-        font-weight: bold;
-        font-size: 12px;
-        border-radius: 4px;
-        text-transform: uppercase;
-        pointer-events: none; /* Allows clicks to go through to the image if needed */
-      }
-
-
       /* Back link */
       .back-link {
         display: block;
@@ -85,7 +58,7 @@
     <div class="container">
       <h1>Past Snooker Tournament Results</h1>
 
-      <a class="back-link" href="index.html">← Return to Home</a>
+      <a class="back-link" href="index.html">← Return to main page</a>
 
       <div class="result-card">
         <div class="card-text">
@@ -141,43 +114,6 @@
               Tournament Logistics (PDF)
             </a>
         </div>
-      </div>
-
-      <div class="result-card">
-        <div class="card-text">
-          <h2>June 2026</h2>
-          <p><strong>Winner:</strong> Dave Daly </p>
-          <p><strong>Runner-up:</strong> Kevin Kuei </p>
-          <p><strong># of Players:</strong> 7 </p>
-
-            <a href="Tournament PDFs/EB 202606 Tournament.pdf" target="_blank">
-              Tournament Logistics (PDF)
-            </a>
-        </div>
-        <div class="card-image">
-          <img src="Images/Dave Daly photo.jpeg" alt="Winner Photo" />
-          <div class="image-overlay-text">Photo Credit: Sandro Menzel</div>
-        </div>
-        
-      </div>
-
-
-      <div class="result-card">
-        <div class="card-text">
-          <h2>July 2026</h2>
-          <p><strong>Winner:</strong> Kevin Kuei </p>
-          <p><strong>Runner-up:</strong> Haocheng Yang </p>
-          <p><strong># of Players:</strong> 7 </p>
-
-            <a href="Tournament PDFs/EB 202607 Tournament.pdf" target="_blank">
-              Tournament Logistics (PDF)
-            </a>
-        </div>
-        <div class="card-image">
-          <img src="Images/Haocheng 202607.jpeg" alt="Winner Photo" />
-          <div class="image-overlay-text">Haocheng Yang</div>
-        </div>
-        
       </div>
       <!-- Additional result-cards can be added when each tournament ends-->
 
